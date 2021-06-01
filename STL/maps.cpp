@@ -33,14 +33,16 @@ int main()
 
 	mp.insert({5,"sdf"});
   
-  //erase() function can take a key or an iterator as an argument
-  mp.erase(1);
-  
-  //find() is used to find if a key is present in the map or not? if key is present then it will return the iterator to it,
-  //otherwise it will return an iterator after the end of the map
-  
-  auto it = mp.find(3); // (*it).first = 3 and (*it).second = "fgh"
+	//erase() function can take a key or an iterator as an argument
+	mp.erase(1);
 
+	  //find() is used to find if a key is present in the map or not? if key is present then it will return the iterator to it,
+	  //otherwise it will return an iterator after the end of the map
+  
+       auto it = mp.find(3); // (*it).first = 3 and (*it).second = "fgh"
+	
+       auto it2 = mp.find(99) //this will return mp.end() 
+	
 	for(auto &i: mp)  //this will take O(nlog(n)) time 
 	{
 		cout<<i.first<<" "<<i.second<<endl;
