@@ -14,7 +14,7 @@
                         
                         
                         Insert (n element): O(nlog(n))
-                        Access (single element): O(nlog(n))
+                        Access (n element): O(nlog(n))
                         
 */
 
