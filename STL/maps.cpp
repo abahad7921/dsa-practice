@@ -4,6 +4,7 @@
     -> Map stores the keys in sorted order
     -> The keys should be unique
     -> If the value is not peovided then it will be initialized with null/0/""
+    -> It uses trees (RB Tree) in its implementation
     
     Time Complexity:  
                         Insert (single element): O(log(n))
