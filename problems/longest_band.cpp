@@ -32,7 +32,7 @@ int largestBand(vector<int>arr)
 
 		if(s.find(parent)==s.end())  //if the parent is not present in the set then start looking for the next elements
 		{	
-      count = 1;
+      			count = 1;
 			int next_no = i+1;
 
 			while(s.find(next_no)!=s.end())
