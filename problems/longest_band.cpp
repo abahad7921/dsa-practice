@@ -50,13 +50,11 @@ int largestBand(vector<int>arr)
 	return largest;
 }
 
-
-
-
-
 int main()
 {
 	vector<int>arr = {1,9,3,0,18,5,2,4,10,7,12,6};
 
 	cout<<largestBand(arr)<<endl;
+	
+	return 0;
 }
