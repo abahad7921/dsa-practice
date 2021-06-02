@@ -19,7 +19,7 @@ int findLargestPeak(vector<int>arr)
 	for(int i=1;i<=n-2;)  //start from 1 as 0th element cannot be the peak 
 	{                     //end at n-1 as the nth element cannot be the peak
 		
-    if(arr[i]>arr[i-1] && arr[i]>arr[i+1])  //checking for peak
+    		if(arr[i]>arr[i-1] && arr[i]>arr[i+1])  //checking for peak
 		{
 			int j=i;
 			int count =1;
@@ -53,5 +53,5 @@ int main()
 
 	cout<<findLargestPeak(arr);
 
-
+	return 0;
 }
