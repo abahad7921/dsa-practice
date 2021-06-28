@@ -12,7 +12,7 @@ using namespace std;
 void printSubstring(string s){
 
 	int n = s.length();
-	int max = (1<<n) -1;
+	int max = (1<<n) -1;  //max subsets possible = 2^n
 
 	for(int i= 0;i<=max;i++){
 
