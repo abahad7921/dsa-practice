@@ -20,7 +20,7 @@ string extractStringAtKey(string str,int key){
 	//string tokeniser 
 	// hello how are you
 
-	char *s = strtok( (char *)str.c_str(), " ");
+	char *s = strtok( (char *)str.c_str(), " ");  //as strtok takes a character array, so we have to typecast str to char array
 	while(key>1){
 		s = strtok(NULL," ");
 		key--;
