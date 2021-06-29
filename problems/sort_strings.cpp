@@ -1,3 +1,17 @@
+/*
+Sample Input
+------------
+3
+92 022
+82 12
+77 13
+2 false numeric
+Sample Output
+-------------
+82 12
+77 13
+92 022
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
