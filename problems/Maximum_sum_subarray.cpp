@@ -1,4 +1,6 @@
 /*
+    Implemented using Kadane's Algorithm
+    
     Find the maximum sum subarray
     
     input: -2, -3, 4, -1, -2, 1, 5, -3
