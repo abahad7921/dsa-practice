@@ -32,7 +32,7 @@ void housingProblem(vector<int> a,int k){
 			}
 
 			if(currenSum == k){
-				cout<<i<<" "<<j-1<<endl;
+				cout<<i<<" - "<<j-1<<endl;
 				minWindow = min(minWindow,abs(j-1-i));
       }
 	}
