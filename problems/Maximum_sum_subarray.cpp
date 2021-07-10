@@ -20,13 +20,13 @@ int main(){
 	vector<int> a = {-2, -3, 4, -1, -2, 1, 5, -3};
 	int n = a.size();
 
-	int sum = 0,prevSum = INT_MIN;
+	int sum = 0,maxSum = INT_MIN;
 	for(int i=0;i<n;i++){
 
 		sum+=a[i];
 
-		if(sum > prevSum){
-			prevSum = sum;
+		if(sum > maxSum){
+			maxSum = sum;
 		}
 
 		if(sum < 0)
@@ -34,6 +34,6 @@ int main(){
 		// cout<<sum<<" "<<prevSum<<endl;
 	}
 
-	cout<<prevSum<<endl;
+	cout<<maxSum<<endl;
 	
 }
