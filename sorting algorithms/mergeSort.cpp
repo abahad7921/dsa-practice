@@ -1,80 +1,73 @@
 #include <bits/stdc++.h>
 using namespace std;
-//Merge Sort Implementation
-//time : O(log(n))
 
-void mergeSort(int arr[],int start,int middle,int end)
-{
-	int n1 = middle - start + 1;
-	int n2 = end - middle;
+void merge(vector<int>&arr,int start,int end){
 
-	int a1[n1],a2[n2];
+	int i= start;
+	int mid = start + (end - start)/2;
+	int j = mid + 1;
 
+	vector<int> temp;
 
-	for(int i=0;i<n1;i++)
-		a1[i] = arr[start + i];
+	while(i<=mid && j<=end){
 
-	for(int i=0;i<n2;i++)
-		a2[i] = arr[middle+1+i];
-
-	int i=0,j=0,k=start;
-
-	while(i<n1 && j<n2)
-	{
-		if(a1[i]<=a2[j])
-		{
-			arr[k] = a1[i];
-			i++;
+		if(arr[i] < arr[j]){
+			temp.push_back(arr[i++]);
 		}
 		else
 		{
-			arr[k] = a2[j];
-			j++;
+			temp.push_back(arr[j++]);
 		}
-
-		k++;
 	}
 
 
-	while(i<n1)
-	{
-		arr[k] = a1[i];
-		i++;
-		k++;
+	while(i<=mid){
+		temp.push_back(arr[i++]);
 	}
 
-	while(j<n2)
-	{
-		arr[k] = a2[j];
-		j++;
-		k++;
+	while(j<=end){
+		temp.push_back(arr[j++]);
+	}
+
+	int k = 0;
+
+	for(int i= start;i<=end;i++){
+		arr[i] = temp[k++];
 	}
 }
 
 
+void mergeSort(vector<int>&arr,int start,int end){
 
-void partition(int arr[],int start,int end)
-{
-	if(start<end)
-	{
-		int middle = start + (end - start)/2;
-
-		partition(arr,start,middle);
-		partition(arr,middle+1,end);
-
-		mergeSort(arr,start,middle,end);
+	if(start >= end){
+		return;
 	}
+
+	int mid = start + (end - start)/2;
+
+	mergeSort(arr,start,mid);
+	mergeSort(arr,mid + 1,end);
+
+	merge(arr,start,end);
 }
 
-int main()
-{
 
-	int arr[] = {1,9,69,44,23,5};
+int main(){
 
-	partition(arr,0,5);
+// 	 #ifndef ONLINE_JUDGE
+// 		freopen("input.txt", "r", stdin);
+// 		freopen("output.txt", "w", stdout);
+// 	#endif
 
-	for(int x:arr)
-		cout<<x<<" ";
+    vector<int> arr = {1,9,-1,0,222,69,25};
 
+    int start = 0;
+    int end = arr.size() - 1;
+    mergeSort(arr,start,end);
 
+    for(auto i: arr){
+    	cout<<i<<" ";
+    }
+
+	
 }
