@@ -73,6 +73,13 @@ int main()
 // 	cout<<"last occurence = "<<lastOccurence(arr,2)<<endl;
 
 	cout<<"frequency of 2 = "<<lastOccurence(arr,2) - firstOccurence(arr,2) + 1<<endl;
+	
+	//we can also solve this by the using STL methods upper bound and lower bound
+	
+	cout<<upper_bound(arr.begin(),arr.end(),2) - lower_bound(arr.begin(),arr.end(),2)<<endl;
+	
+	//upper bpund gives the next element > than the key
+	//lower bound gives the element >= the key
 
 	return 0;
 }
