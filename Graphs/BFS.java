@@ -6,7 +6,8 @@ import java.io.*;
 
 class Codechef
 {   
-    
+    //time: O(n + e) space: O(n + e) + O(n) + O(n)
+	
     public static void BFS(int i,ArrayList<ArrayList<Integer>>adj,boolean visited[],ArrayList<Integer>ans){
         
         Queue<Integer> q = new LinkedList<>();
