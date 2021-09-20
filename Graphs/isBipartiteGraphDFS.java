@@ -55,8 +55,9 @@ public class Main {
     }
  
     public static boolean isBipartiteDFS(int node, ArrayList<ArrayList<Integer>> adj, int[] color){
-
-        color[node] = 1;
+        
+        if(color[node] == -1)
+            color[node] = 1;
 
         for(Integer itr: adj.get(node)){
             if(color[itr] == -1){
